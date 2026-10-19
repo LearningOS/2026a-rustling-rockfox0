@@ -1,11 +1,9 @@
-// strings1.rs
+//字符串1.rs
 //
-// Make me compile without changing the function signature!
+//让我在不改变函数签名的情况下编译！
 //
-// Execute `rustlings hint strings1` or use the `hint` watch subcommand for a
-// hint.
-
-// I AM NOT DONE
+//执行 `rustlingshintstrings1` 或使用 `hint`watch 子命令
+//提示。
 
 fn main() {
     let answer = current_favorite_color();
@@ -13,5 +11,5 @@ fn main() {
 }
 
 fn current_favorite_color() -> String {
-    "blue"
+    "blue".to_string() // TODO: Return a String instead of a &str
 }

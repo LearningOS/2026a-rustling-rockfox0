@@ -1,16 +1,16 @@
 # Options
 
-Type Option represents an optional value: every Option is either Some and contains a value, or None, and does not.
-Option types are very common in Rust code, as they have a number of uses:
+Type Option 表示一个可选值：每个 Option 要么是 Some 且包含值，要么是 None 且不包含值。
+选项类型在 Rust 代码中非常常见，因为它们有多种用途：
 
-- Initial values
-- Return values for functions that are not defined over their entire input range (partial functions)
-- Return value for otherwise reporting simple errors, where None is returned on error
-- Optional struct fields
-- Struct fields that can be loaned or "taken"
-- Optional function arguments
-- Nullable pointers
-- Swapping things out of difficult situations
+-初始值
+-未在整个输入范围内定义的函数的返回值（部分函数）
+-用于报告简单错误的返回值，其中错误时不返回 None
+-可选的结构字段
+-可以借出或“拿走”的结构字段
+-可选函数参数
+-可空指针
+-摆脱困境
 
 ## Further Information
 

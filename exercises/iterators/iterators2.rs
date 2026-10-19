@@ -1,13 +1,12 @@
-// iterators2.rs
+//迭代器2.rs
 //
-// In this exercise, you'll learn some of the unique advantages that iterators
-// can offer. Follow the steps to complete the exercise.
+//在本练习中，您将了解迭代器的一些独特优势
+//可以提供。按照步骤完成练习。
 //
-// Execute `rustlings hint iterators2` or use the `hint` watch subcommand for a
-// hint.
+//执行 `rustlingshintiterators2` 或使用 `hint`watch 子命令
+//提示。
 
-// I AM NOT DONE
-
+//我还没完成
 // Step 1.
 // Complete the `capitalize_first` function.
 // "hello" -> "Hello"
@@ -15,7 +14,7 @@ pub fn capitalize_first(input: &str) -> String {
     let mut c = input.chars();
     match c.next() {
         None => String::new(),
-        Some(first) => ???,
+        Some(first) => first.to_uppercase().collect::<String>() + c.as_str()
     }
 }
 
@@ -24,7 +23,7 @@ pub fn capitalize_first(input: &str) -> String {
 // Return a vector of strings.
 // ["hello", "world"] -> ["Hello", "World"]
 pub fn capitalize_words_vector(words: &[&str]) -> Vec<String> {
-    vec![]
+    words.iter().copied().map(capitalize_first).collect()
 }
 
 // Step 3.
@@ -32,7 +31,7 @@ pub fn capitalize_words_vector(words: &[&str]) -> Vec<String> {
 // Return a single string.
 // ["hello", " ", "world"] -> "Hello World"
 pub fn capitalize_words_string(words: &[&str]) -> String {
-    String::new()
+    words.iter().copied().map(capitalize_first).collect()
 }
 
 #[cfg(test)]
